@@ -1,0 +1,40 @@
+<Window x:Class="RazerSynapse.StartupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Razer Synapse"
+        Height="444"
+        Width="670"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <Storyboard x:Key="LogoRevealAnimation"></Storyboard>
+        <Storyboard x:Key="PulseAnimation"></Storyboard>
+        <Storyboard x:Key="TextRevealAnimation"></Storyboard>
+        <Storyboard x:Key="LoadingDotsAnimation"></Storyboard>
+    </Window.Resources>
+    <Grid x:Name="MainGrid" Background="#0A0A0A">
+        <Canvas x:Name="ParticleCanvas" />
+        <Grid x:Name="RevealContainer">
+            <Border x:Name="MainBorder" CornerRadius="5">
+                <Border x:Name="ContentContainer">
+                    <Grid>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Path x:Name="RazerSynapseLogo" Width="80" Height="80" HorizontalAlignment="Center" Margin="0,0,0,20" />
+                            <TextBlock x:Name="LoadingText" Text="INITIALIZING RAZER SYNAPSE" TextAlignment="Center" Foreground="White" FontSize="14" />
+                            <Grid x:Name="LoadingIndicator" Height="30" Margin="0,20,0,0">
+                                <Ellipse x:Name="Dot1" Width="8" Height="8" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Border>
+            <RectangleGeometry x:Name="RevealClip" Rect="0,0,670,444" />
+        </Grid>
+    </Grid>
+</Window>
