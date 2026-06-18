@@ -3,10 +3,10 @@ name: .NET Core Desktop
 
 on:
   push:
-    branches: [ "Aimmy-V2" ]
+    branches: [ "RazerSynapse" ]
     paths:
-      - 'Aimmy2/**'
-      - 'Aimmy2.sln'
+      - 'RazerSynapse/**'
+      - 'RazerSynapse.sln'
       - '**/*.csproj'
       - '**/*.props'
       - '**/*.targets'
@@ -37,8 +37,8 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
-      Solution_Name: Aimmy2.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
-      Wpf_Project_Path: Aimmy2\Aimmy2.csproj
+      Solution_Name: RazerSynapse.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
+      Wpf_Project_Path: RazerSynapse\RazerSynapse.csproj
       #Wap_Project_Name: MyWpfApp.Package.wapproj
       
     steps:
@@ -78,4 +78,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: aimmyidk
-        path: Aimmy2\bin\x64\Release\
+        path: RazerSynapse\bin\x64\Release\
